@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalleMovimientoActivity">
+
+    <ImageView
+        android:id="@+id/ivAtras"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:onClick="back"
+        android:src="@drawable/arrow_back"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/ivAtras"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Detalle del movimiento"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textColor="@color/purple_nequi"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="129dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toBottomOf="@+id/ivAtras">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:paddingTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/icono"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:rotation="270"/>
+
+                <TextView
+                    android:id="@+id/tvTipo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Envio"
+                    android:textSize="18dp"
+                    android:layout_marginStart="10dp"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvPara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Para"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/tvNombreDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:layout_marginTop="2dp"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Conversación"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/tvMensajeDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mensaje"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Cuánto?"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:id="@+id/tvMontoDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$ 0"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Numero Nequi"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/tvNumNequi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Number"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/tvFechaDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="00/00/0000  00:00:00"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Forma de pago"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/tvFormaPago"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Number"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvDonde"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="¿De dónde salió la plata?"
+                android:layout_marginTop="20dp"/>
+
+
+            <RelativeLayout
+                android:id="@id/btn1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="60dp"
+                android:background="@drawable/redondear"
+                android:backgroundTint="@color/white"
+                android:elevation="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                >
+
+                <ImageView
+                    android:id="@+id/icon1"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/disponible"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"/>
+
+
+                <TextView
+                    android:id="@+id/tvDispoDeta"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:paddingTop="10dp"
+                    android:paddingStart="10dp"
+                    android:text="Disponible"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@id/icon2"
+                    android:layout_toRightOf="@id/icon1"/>
+
+                <TextView
+                    android:id="@+id/tvDispoDetalle"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:paddingTop="5dp"
+                    android:paddingStart="10dp"
+                    android:text="$ 0"
+                    android:textSize="15dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@id/icon2"
+                    android:layout_toRightOf="@id/icon1"/>
+
+
+                <ImageView
+                    android:id="@+id/icon2"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:padding="25dp"
+                    android:rotation="180"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

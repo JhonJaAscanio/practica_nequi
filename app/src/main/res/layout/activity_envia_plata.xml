@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EnviaPlataActivity">
+
+    <ImageView
+        android:id="@+id/ivAtras"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:onClick="atras"
+        android:src="@drawable/arrow_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="58dp"
+        app:layout_constraintTop_toBottomOf="@+id/ivAtras">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+            <TextView
+                android:id="@+id/tvEP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="18dp"
+                android:textStyle="bold"
+                android:text="Envía plata"
+                android:textSize="28dp"
+                android:textColor="@color/purple_nequi"/>
+
+            <LinearLayout
+                android:id="@+id/llCampoCel"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:paddingStart="15dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_rombo_blaco"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp">
+
+
+
+                <EditText
+                    android:id="@+id/etCel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="Cel"
+                    android:inputType="phone"
+                    android:textStyle="bold"
+                    android:maxLength="20"
+                    android:padding="8dp"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:scaleType="centerInside"
+                    android:onClick="users"
+                    android:src="@drawable/icon_add_user" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="20dp"
+                android:text="Revise bien el número para enviarle a la persona correcta"/>
+
+
+
+            <LinearLayout
+                android:id="@+id/llCampoCuanto"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:paddingStart="15dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_rombo_blaco"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp">
+
+
+
+                <EditText
+                    android:id="@+id/etCuanto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="¿Cuánto?"
+                    android:inputType="phone"
+                    android:textStyle="bold"
+                    android:maxLength="10"
+                    android:padding="8dp"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    />
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etMensaje"
+                android:layout_width="match_parent"
+                android:layout_height="89dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:hint="Mensaje"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:background="@drawable/edittext_rombo_blaco"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llCampoCuanto"
+                tools:layout_editor_absoluteY="564dp" />
+
+            <TextView
+                android:id="@+id/tvEscoge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="20dp"
+                android:text="Escoge de donde saldrá la plata"
+                android:textSize="18dp"/>
+
+
+            <RelativeLayout
+                android:id="@id/btn1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/redondear"
+                android:backgroundTint="@color/white"
+                android:elevation="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="verDisponible">
+
+                <ImageView
+                    android:id="@+id/icon1"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/disponible"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"/>
+
+                <ImageView
+                    android:id="@+id/icon3"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/card_tarjeta"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/tvDispo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:paddingTop="10dp"
+                    android:paddingStart="10dp"
+                    android:text="Disponible"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@id/icon2"
+                    android:layout_toRightOf="@id/icon1"/>
+
+                <TextView
+                    android:id="@+id/tvDispo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:paddingTop="5dp"
+                    android:paddingStart="10dp"
+                    android:text="$ 0"
+                    android:textSize="15dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@id/icon2"
+                    android:layout_toRightOf="@id/icon1"
+                    android:layout_below="@id/tvDispo1"/>
+
+
+                <ImageView
+                    android:id="@+id/icon2"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:padding="25dp"
+                    android:rotation="180"
+                    android:src="@drawable/back"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+
+
+            <Button
+                android:id="@+id/boton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/redondear"
+                android:text="Sigue"
+                android:onClick="Enviar"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/purple_200" /> <!-- Color de fondo del rombo -->
+    <corners android:radius="5dp" /> <!-- Radio de las esquinas del rombo -->
+    <rotate android:fromDegrees="0">
+        <size android:width="0dp" android:height="0dp" /> <!-- Tamaño del rombo -->
+    </rotate>
+</shape>

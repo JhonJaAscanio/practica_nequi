@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TarjetaActivity">
+
+    <LinearLayout
+        android:id="@+id/llT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivA"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+            android:clickable="true"
+            android:onClick="back"
+            android:src="@drawable/arrow_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="Tu tarjeta Nequi"
+            android:textSize="20dp"
+            android:textColor="@color/purple_nequi"
+            android:textAlignment="center"/>
+
+        <ImageView
+            android:id="@+id/ivC"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"/>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/flFronter"
+        android:layout_width="210dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llT"
+        android:background="@drawable/tarjeta" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="90dp"
+            android:text="Numero de cuenta"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvNumCuentaRefresh"
+            android:layout_width="170dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="50dp"
+            android:text=""
+            android:background="@drawable/button_oval"
+            android:textColor="@color/purple_nequi"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
+
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/redondear"
+            android:gravity="center"
+            android:onClick="createNewNumber"
+            android:elevation="8dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Refrescar Numero"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                />
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="Generar Tarjeta Virtual"
+        android:textSize="20dp"
+        android:onClick="createCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/purple_nequi"
+        app:layout_constraintTop_toBottomOf="@id/flFronter"
+        android:elevation="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
